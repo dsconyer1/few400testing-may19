@@ -7,7 +7,8 @@ describe('the actions', () => {
       const inputItem: TodoListItem = {
         id: '42',
         description: 'Pizza',
-        completed: true
+        completed: true,
+        temporary: false
       };
 
       const result = new CompletedItem(inputItem);

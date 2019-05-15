@@ -174,17 +174,20 @@ describe('the reducer', () => {
          {
           id: '1',
           description: 'Clean Garage',
-          completed: true
+          completed: true,
+          temporary: false
         },
         {
           id: '2',
           description: 'Finish Daryl\'s Deck',
-          completed: false
+          completed: false,
+          temporary: false
         },
         {
           id: 'T0',
           description: 'Pizza',
-          completed: false
+          completed: false,
+          temporary: true
     }]);
   });
 });

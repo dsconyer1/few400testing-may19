@@ -1,6 +1,6 @@
 import { Effect, Actions, ofType } from '@ngrx/effects';
 import { Injectable } from '@angular/core';
-import { TodosDataService } from "./todos.data.service";
+import { TodosDataService } from './todos.data.service';
 import * as actions from './actions/list.actions';
 import { map, switchMap } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ export class TodosEffects {
                 map(result => new actions.ItemAddedSuccessfully(a.item.id, result))
               )
             )
-        )
+        );
 
         constructor(private actions$: Actions, private service: TodosDataService) {}
 }
