@@ -38,6 +38,15 @@ describe('BookListComponent', () => {
     ).toPromise();
     expect(books[0].title).toBe('Walden');
   });
+
+  it('has the list', () => {
+    expect(elList.childElementCount).toBe(2);
+  });
+
+  it('formats the entries correctly', () => {
+    const li = elList.firstElementChild as HTMLLIElement;
+    expect(li.innerText).toBe('1 is Walden');
+  });
 });
 
 class FakeBookDataService extends BookDataService {

@@ -1,0 +1,17 @@
+<ul>
+  <li *ngFor="let item of todoList$ | async">
+   <span [ngClass]="{'completed':item.completed}"> {{ item.description }} </span>
+   <input type="button" value="X" (click)="complete(item)" *ngIf="!item.completed && !item.temporary">
+   <span *ngIf="item.temporary">...</span>
+  </li>
+</ul>
+<div class="row">
+  <label for="item">Item</label>
+  <input name="item"
+          #item>
+  <input type="button"
+          (click)="add(item)"
+          value="Add It">
+</div>
+
+<pre> {{ todoList$ | async | json }}</pre>

@@ -12,7 +12,7 @@ export class BookDataService {
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<BookListItem[]> {
-    return this.http.get<BooksGetResponse>('http://someserve/books')
+    return this.http.get<BooksGetResponse>('http://someserver/books')
       .pipe(
         map(r => r.data)
       );
